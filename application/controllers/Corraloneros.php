@@ -33,8 +33,8 @@ class Corraloneros extends CI_Controller {
 
 		/*Aqui va el contenido*/
 		//$this->load->view('Corraloneros/corraloneros_view');
-		$this->load->view('Corraloneros/corraloneros_addGruas_view', $data);
-		//$this->load->view('Corraloneros/corraloneros_addArrastres_view');
+		//$this->load->view('Corraloneros/corraloneros_addGruas_view', $data);
+		$this->load->view('Corraloneros/corraloneros_addArrastres_view');
 
 		$this->load->view('Corraloneros/gruas_datatable_view');
 		$this->load->view('Commons/content_wraper_close_view');
@@ -45,6 +45,11 @@ class Corraloneros extends CI_Controller {
 
 	public function addGruas()
 	{
+		$gruas= $this->General_model->get('gruas', array(), array(), '');
+
+		$data= array(
+			'gruas'  => $gruas,
+		);
 		$this->load->view('Commons/html_open_view');
 		$this->load->view('Commons/head_view');
 		$this->load->view('Commons/body_open_view');
@@ -55,12 +60,13 @@ class Corraloneros extends CI_Controller {
 		$this->load->view('Commons/content_wraper_header_view');
 
 		/*Aqui va el contenido*/
-		$this->load->view('Corraloneros/corraloneros_view');
+		$this->load->view('Corraloneros/corraloneros_addGruas_view', $data);
 
 		$this->load->view('Commons/content_wraper_close_view');
 		$this->load->view('Commons/footer_view');
 		$this->load->view('Commons/wraper_close_view');
 		$this->load->view('Commons/scripts_view');
+		$this->load->view('Corraloneros/gruas_datatable_view');
 	}
 	public function insertGruas(){
 		$tipo= $this->input->post('tipo');

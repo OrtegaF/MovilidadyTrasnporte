@@ -1,5 +1,5 @@
 <!-- jQuery -->
-<script src="./vendorvendor/plugins/jquery/jquery.min.js"></script>
+<script src="./vendor/plugins/jquery/jquery.min.js"></script>
 <!-- Bootstrap 4 -->
 <script src="./vendor/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
 

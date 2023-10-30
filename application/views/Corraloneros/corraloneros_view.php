@@ -11,7 +11,7 @@
             <div class="icon">
             <i class="fas fa-plus-square"></i>
             </div>
-            <a href="" class="small-box-footer">Más ... <i class="fas fa-arrow-circle-right"></i></a>
+            <a href="<?= base_url('add_cranes')?>" class="small-box-footer">Más ... <i class="fas fa-arrow-circle-right"></i></a>
             </div>
         </div>
         <div class="col-lg-4 col-6">

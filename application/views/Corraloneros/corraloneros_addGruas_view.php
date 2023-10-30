@@ -60,58 +60,58 @@
         </div>
     </div>
     <div class="col-lg-12 col-md-8">
-    <div class="card card-danger">
-        <div class="card-header">
-          <h2 class="card-title">Gruas registradas</h2>
-        </div>
-        <div class="card-body">
-          <table class="table table-bordered table-hover table-striped" id="tablaGruas">
-            <thead>
-              <tr class="text-center">
-                <th>No.</th>
-                <th>Tipo de Grua</th>
-                <th>Matricula</th>
-                <th>No. de Motor</th>
-                <th>Kg máximos</th>
-                <th>Marca</th>
-                <th>Modelo</th>
-                <th>Opciones</th>
-              </tr>
-            </thead>
-            <tbody class="text-center">
-              <?php
-              
-              if ($gruas!=false) {
-                foreach ($gruas->result() as $grua) {
-                  ?>
-                  <tr id="r_<?php echo $grua->id_grua ?>">
-                    <td><?php echo $grua->id_grua ?></td>
-                    <td><?php echo $grua->tipo ?></td>
-                    <td><?php echo $grua->matricula ?></td>
-                    <td><?php echo $grua->n_motor ?></td>
-                    <td><?php echo $grua->kg_max ?></td>
-                    <td><?php echo $grua->marca ?></td>
-                    <td><?php echo $grua->modelo ?></td>
-                    <td>
-                     <!-- <a href="" title="Actualizar taller" class="">
-                        <i class="fas fa-edit"></i>
-                      </a>-->
-                      <a href="" title="Borrar taller" class="btn-borrar" data-name="<?php echo $grua->id_grua ?>">
-                        <i class="fas fa-trash"></i>
-                      </a>
-                      <a href="" title="Actualizar taller" class="btn-actualizar" data-id="<?php echo $grua->id_grua ?>" data-toggle="modal" data-target="#modal-default">
-                        <i class="fas fa-edit text-purple"></i>
-                      </a>
-                    </td>
+        <div class="card card-danger">
+            <div class="card-header">
+              <h2 class="card-title">Gruas registradas</h2>
+            </div>
+            <div class="card-body">
+              <table class="table table-bordered table-hover table-striped" id="tablaGruas">
+                <thead>
+                  <tr class="text-center">
+                    <th>No.</th>
+                    <th>Tipo de Grua</th>
+                    <th>Matricula</th>
+                    <th>No. de Motor</th>
+                    <th>Kg máximos</th>
+                    <th>Marca</th>
+                    <th>Modelo</th>
+                    <th>Opciones</th>
                   </tr>
+                </thead>
+                <tbody class="text-center">
                   <?php
-                }
-              }
-              ?>
-            </tbody>
-            <tfoot></tfoot>
-          </table>
+                  
+                  if ($gruas!=false) {
+                    foreach ($gruas->result() as $grua) {
+                      ?>
+                      <tr id="r_<?php echo $grua->id_grua ?>">
+                        <td><?php echo $grua->id_grua ?></td>
+                        <td><?php echo $grua->tipo ?></td>
+                        <td><?php echo $grua->matricula ?></td>
+                        <td><?php echo $grua->n_motor ?></td>
+                        <td><?php echo $grua->kg_max ?></td>
+                        <td><?php echo $grua->marca ?></td>
+                        <td><?php echo $grua->modelo ?></td>
+                        <td>
+                        <!-- <a href="" title="Actualizar taller" class="">
+                            <i class="fas fa-edit"></i>
+                          </a>-->
+                          <a href="" title="Borrar taller" class="btn-borrar" data-name="<?php echo $grua->id_grua ?>">
+                            <i class="fas fa-trash"></i>
+                          </a>
+                          <a href="" title="Actualizar taller" class="btn-actualizar" data-id="<?php echo $grua->id_grua ?>" data-toggle="modal" data-target="#modal-default">
+                            <i class="fas fa-edit text-purple"></i>
+                          </a>
+                        </td>
+                      </tr>
+                      <?php
+                    }
+                  }
+                  ?>
+                </tbody>
+                
+              </table>
+            </div>
         </div>
-      </div>
     </div>
 </section>
