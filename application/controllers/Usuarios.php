@@ -1,8 +1,12 @@
 <?php
+error_reporting(0);
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Usuarios extends CI_Controller {
-    $this->load->view('Commons/html_open_view');
+
+	public function index()
+	{
+        $this->load->view('Commons/html_open_view');
 		$this->load->view('Commons/head_view');
 		$this->load->view('Commons/body_open_view');
 		$this->load->view('Commons/wraper_open_view');
@@ -18,4 +22,5 @@ class Usuarios extends CI_Controller {
 		$this->load->view('Commons/footer_view');
 		$this->load->view('Commons/wraper_close_view');
 		$this->load->view('Commons/scripts_view');
+	}
 }

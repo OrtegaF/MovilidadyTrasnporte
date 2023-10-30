@@ -1,0 +1,117 @@
+<section class="content">
+    <div class="col-lg-12 col-md-8">
+        <div class="card card-danger">
+            <div class="card-header">
+                <h3 class="card-title">Agregar Grua</h3>
+            </div>
+            <div class="card-body">
+                <form method="POST" id="addGruas" action="<?php echo base_url('Corraloneros/insertGruas')  ?>">
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <div class="form-group">
+                                <label for="">Tipo de Grua</label>
+                                <select name="tipo" id="tipo" class="form-control">
+                                    <option value="">-Seleccione-</option>
+                                    <option value="A">A</option>
+                                    <option value="B">B</option>
+                                    <option value="C">C</option>
+                                    <option value="D">D</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="form-group">
+                                <label for="">Matricula</label>
+                                <input type="text" id="matricula" name="matricula" class="form-control" placeholder="HYI98K">
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="form-group">
+                                <label for="">No. de motor</label>
+                                <input type="text" id="n_motor" name="n_motor" class="form-control" placeholder="H77463904">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <div class="form-group">
+                                <label for="">Kg máximos</label>
+                                <input type="text" id="kg_max" name="kg_max" class="form-control" placeholder="300">
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="form-group">
+                                <label for="">Marca</label>
+                                <input type="text" id="marca" name="marca" class="form-control" placeholder="FORD">
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="form-group">
+                                <label for="">Modelo</label>
+                                <input type="text" id="modelo" name="modelo" class="form-control" placeholder="Modelo1">
+                            </div>
+                        </div>
+                    </div>
+            </div>
+            <div class="card-footer">
+                <button type="submit" class="btn btn-danger" id="guardaInst" >Guardar</button>
+            </div>
+            </form>
+        </div>
+    </div>
+    <div class="col-lg-12 col-md-8">
+    <div class="card card-danger">
+        <div class="card-header">
+          <h2 class="card-title">Gruas registradas</h2>
+        </div>
+        <div class="card-body">
+          <table class="table table-bordered table-hover table-striped" id="tablaGruas">
+            <thead>
+              <tr class="text-center">
+                <th>No.</th>
+                <th>Tipo de Grua</th>
+                <th>Matricula</th>
+                <th>No. de Motor</th>
+                <th>Kg máximos</th>
+                <th>Marca</th>
+                <th>Modelo</th>
+                <th>Opciones</th>
+              </tr>
+            </thead>
+            <tbody class="text-center">
+              <?php
+              
+              if ($gruas!=false) {
+                foreach ($gruas->result() as $grua) {
+                  ?>
+                  <tr id="r_<?php echo $grua->id_grua ?>">
+                    <td><?php echo $grua->id_grua ?></td>
+                    <td><?php echo $grua->tipo ?></td>
+                    <td><?php echo $grua->matricula ?></td>
+                    <td><?php echo $grua->n_motor ?></td>
+                    <td><?php echo $grua->kg_max ?></td>
+                    <td><?php echo $grua->marca ?></td>
+                    <td><?php echo $grua->modelo ?></td>
+                    <td>
+                     <!-- <a href="" title="Actualizar taller" class="">
+                        <i class="fas fa-edit"></i>
+                      </a>-->
+                      <a href="" title="Borrar taller" class="btn-borrar" data-name="<?php echo $grua->id_grua ?>">
+                        <i class="fas fa-trash"></i>
+                      </a>
+                      <a href="" title="Actualizar taller" class="btn-actualizar" data-id="<?php echo $grua->id_grua ?>" data-toggle="modal" data-target="#modal-default">
+                        <i class="fas fa-edit text-purple"></i>
+                      </a>
+                    </td>
+                  </tr>
+                  <?php
+                }
+              }
+              ?>
+            </tbody>
+            <tfoot></tfoot>
+          </table>
+        </div>
+      </div>
+    </div>
+</section>

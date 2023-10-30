@@ -52,3 +52,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 $route['default_controller'] = 'welcome';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
+
+//Login
+$route['login']    = 'Login';
+
+//Corraloneros
+$route['corraloneros_menu']    = 'Corraloneros';
+$route['add_cranes']    = 'Corraloneros/addGruas';
+
+//Administrador
+$route['admin_menu']    = 'Administrador';
