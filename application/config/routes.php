@@ -59,6 +59,13 @@ $route['login']    = 'Login';
 //Corraloneros
 $route['corraloneros_menu']    = 'Corraloneros';
 $route['add_cranes']    = 'Corraloneros/addGruas';
+$route['insert_cranes'] = 'Corraloneros/insertGruas';
+$route['add_drag']    = 'Corraloneros/addArrastres';
+$route['insert_drag'] = 'Corraloneros/insertArrastre';
 
 //Administrador
 $route['admin_menu']    = 'Administrador';
+$route['admin_addCrane'] = 'Administrador/adminCorralones';
+$route['insert_Cranes'] = 'Administrador/insertCorralones';
+$route['admin_addUsers'] = 'Administrador/adminUsuarios';
+$route['insert_Users'] = 'Administrador/insertUsuarios';

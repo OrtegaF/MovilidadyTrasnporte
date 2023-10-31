@@ -1,11 +1,19 @@
 <section class="content">
     <div class="col-lg-12 col-md-8">
-        <div class="card card-danger">
+        <div class="card card-danger collapsed-card">
             <div class="card-header">
                 <h3 class="card-title">Agregar Grua</h3>
+                    <div class="card-tools">
+                        <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                        <i class="fas fa-plus"></i>
+                        </button>
+                        <button type="button" class="btn btn-tool" data-card-widget="remove">
+                        <i class="fas fa-times"></i>
+                        </button>
+                    </div>
             </div>
             <div class="card-body">
-                <form method="POST" id="addGruas" action="<?php echo base_url('Corraloneros/insertGruas')  ?>">
+                <form method="POST" id="addGruas" action="<?php echo base_url('insert_cranes')  ?>">
                     <div class="row">
                         <div class="col-lg-4">
                             <div class="form-group">

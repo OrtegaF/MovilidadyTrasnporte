@@ -1,20 +1,20 @@
- <!-- Main Sidebar Container -->
- <aside class="main-sidebar sidebar-dark-primary elevation-4">
+  <!-- Main Sidebar Container -->
+  <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
-    <a href="index3.html" class="brand-link">
-      <img src="./vendor/dist/img/logos/utplogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
+    <a href="../../index3.html" class="brand-link">
+      <img src="./vendor/dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
       <span class="brand-text font-weight-light">SMT Puebla</span>
     </a>
 
     <!-- Sidebar -->
     <div class="sidebar">
-      <!-- Sidebar user panel (optional) -->
+      <!-- Sidebar user (optional) -->
       <div class="user-panel mt-3 pb-3 mb-3 d-flex">
         <div class="image">
-          <img src="./vendor/dist/img/avatar2.png" class="img-circle elevation-2" alt="User Image">
+          <img src="./vendor/dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
-          <a href="#" class="d-block">Usuario</a>
+          <a href="#" class="d-block">Corralonero</a>
         </div>
       </div>
 
@@ -35,19 +35,19 @@
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
-          <li class="nav-item menu-open">
-            <a href="#" class="nav-link active">
-            <i class="fas fa-info-circle"></i>
+          <li class="nav-item">
+            <a href="<?= base_url('add_cranes')?>" class="nav-link">
+              <i class="fas fa-info-circle"></i>
               <p>
-                Información adicional
+                Gruas
               </p>
             </a>
           </li>
           <li class="nav-item">
-            <a href="pages/widgets.html" class="nav-link">
-               <i class="fas fa-car-crash"></i>
+            <a href="<?= base_url('add_drag')?>" class="nav-link">
+              <i class="fas fa-car-crash"></i>
               <p>
-                Reporte de arrastre
+                Arrastres
               </p>
             </a>
           </li>

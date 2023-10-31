@@ -24,7 +24,7 @@
             <div class="icon">
             <i class="fas fa-car-crash"></i>
             </div>
-            <a href="#" class="small-box-footer">Más .. <i class="fas fa-arrow-circle-right"></i></a>
+            <a href="<?= base_url('add_drag')?>" class="small-box-footer">Más .. <i class="fas fa-arrow-circle-right"></i></a>
             </div>
         </div>
     </div>
