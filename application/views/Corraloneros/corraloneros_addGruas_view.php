@@ -104,11 +104,8 @@
                         <!-- <a href="" title="Actualizar taller" class="">
                             <i class="fas fa-edit"></i>
                           </a>-->
-                          <a href="" title="Borrar taller" class="btn-borrar" data-name="<?php echo $grua->id_grua ?>">
+                          <a href="<?php echo base_url('delete_cranesG/'.$grua->id_grua) ?>" title="Borrar Grua" class="btn-borrar" data-name="<?php echo $grua->id_grua ?>">
                             <i class="fas fa-trash"></i>
-                          </a>
-                          <a href="" title="Actualizar taller" class="btn-actualizar" data-id="<?php echo $grua->id_grua ?>" data-toggle="modal" data-target="#modal-default">
-                            <i class="fas fa-edit text-purple"></i>
                           </a>
                         </td>
                       </tr>

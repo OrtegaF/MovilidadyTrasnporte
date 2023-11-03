@@ -36,7 +36,7 @@
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
           <li class="nav-item">
-            <a href="<?= base_url('add_cranes')?>" class="nav-link">
+            <a href="<?= base_url('add_cranesG')?>" class="nav-link">
               <i class="fas fa-info-circle"></i>
               <p>
                 Gruas
