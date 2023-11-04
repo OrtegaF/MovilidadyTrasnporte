@@ -15,20 +15,7 @@ class Home extends CI_Controller {
 
 	public function index()
 	{
-        $this->load->view('Commons/html_open_view');
-		$this->load->view('Commons/head_view');
-		$this->load->view('Commons/body_open_view');
-		$this->load->view('Commons/wraper_open_view');
-		$this->load->view('Commons/navbar_home_view');
-		$this->load->view('Commons/content_wraper_open_view');
-		$this->load->view('Commons/content_wraper_header_view');
-
 		/*Aqui va el contenido*/
-		$this->load->view('Home/home_view');
-
-		$this->load->view('Commons/content_wraper_close_view');
-		$this->load->view('Commons/footer_view');
-		$this->load->view('Commons/wraper_close_view');
-		$this->load->view('Commons/scripts_view');
+		$this->load->view('Home/home_prueba_view');
     }
 }

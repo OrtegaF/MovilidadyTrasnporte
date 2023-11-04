@@ -58,10 +58,11 @@ $route['login']    = 'Login';
 
 //Corraloneros
 $route['corraloneros_menu']    = 'Corraloneros';
+//administrador Gruas
 $route['add_cranesG']    = 'Corraloneros/addGruas';
 $route['insert_cranes'] = 'Corraloneros/insertGruas';
 $route['delete_cranesG/(:any)'] = 'Corraloneros/borrar_grua';
-
+//administrador Arrastres
 $route['add_drag']    = 'Corraloneros/addArrastres';
 $route['insert_drag'] = 'Corraloneros/insertArrastre';
 
