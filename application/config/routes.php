@@ -69,3 +69,4 @@ $route['admin_addCrane'] = 'Administrador/adminCorralones';
 $route['insert_Cranes'] = 'Administrador/insertCorralones';
 $route['admin_addUsers'] = 'Administrador/adminUsuarios';
 $route['insert_Users'] = 'Administrador/insertUsuarios';
+$route['admin_mostpuebla']    = 'Administrador/mostrar_map';
