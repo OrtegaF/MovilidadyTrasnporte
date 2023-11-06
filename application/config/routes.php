@@ -74,12 +74,15 @@ $route['insert_Cranes'] = 'Administrador/insertCorralones';
 $route['get_Cranes'] = 'Administrador/recupera_corralon';
 $route['update_Cranes'] = 'Administrador/actualiza_corralon';
 $route['delete_Cranes/(:any)'] = 'Administrador/borrar_corralon';
+$route['admin_mostpuebla']    = 'Administrador/mostrar_map';
+
 //usuarios
 $route['admin_addUsers'] = 'Administrador/adminUsuarios';
 $route['get_Users'] = 'Administrador/recupera_usuario';
 $route['update_Users'] = 'Administrador/actualiza_usuario';
 $route['insert_Users'] = 'Administrador/insertUsuarios';
 $route['delete_Users/(:any)'] = 'Administrador/borrar_usuario';
+
 //trazado de rutas
 $route['admin_routes'] = 'Administrador/adminRutas';
 $route['search_info'] = 'Administrador/buscaDatos';

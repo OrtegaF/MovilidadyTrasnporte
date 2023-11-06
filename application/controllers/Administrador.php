@@ -279,4 +279,34 @@ class Administrador extends CI_Controller {
 		//var_dump($data);
 		$this->load->view('Administrador/datos_view', $data);
 	}
+	public function mostrar_map()
+	{
+		//consultas
+		$arrastres = $this->General_model->get('arrastres', array(). array(), '');
+
+		$data= array(
+			'arrastres' => $arrastres,
+		);
+
+		$this->load->view('Commons/html_open_view');
+		$this->load->view('Commons/head_view');
+		$this->load->view('Commons/body_open_view');
+		$this->load->view('Commons/wraper_open_view');
+		$this->load->view('Commons/navbar_view');
+		$this->load->view('Commons/sidebar_administrador_view');
+		$this->load->view('Commons/content_wraper_open_view');
+		$this->load->view('Commons/content_wraper_header_view');
+
+
+		/*Aqui va el contenido*/
+		$this->load->view('Administrador/administrador_mostrarmap_view');
+		
+		$this->load->view('Commons/content_wraper_close_view');
+		$this->load->view('Commons/footer_view');
+		$this->load->view('Commons/wraper_close_view');
+		$this->load->view('Commons/scripts_view');
+		
+		$this->load->view('Administrador/mapa_js_view');
+
+	}
 }
