@@ -75,75 +75,34 @@
     </ul>
   </nav>
   <section class="content" style="padding:50px; marging:30px;">
-  <h3>Busqueda de Vehículo</h3>
     <div class="row">
-        <div class="col-lg-6">
-            <div class="card" style="width: 33rem;">
-                <img src="./vendor/dist/img/photo2.png" class="card-img-top" alt="...">
+        <div class="col-lg-4">
+            <div class="card" style="width: 18rem;">
+                <img src="./vendor/dist/img/photo1.png" class="card-img-top" alt="...">
                 <div class="card-body">
-                    <h5 class="card-title">Busqueda de Vehículo</h5>
-                    <br>
-                    <p>Ingrese su Matricula.</p>
-                        <div class="form-group">
-                            <label for="">Matricula:</label>
-                            <input type="text" name="matricula" id="matricula" class="form-control">
-                        </div>
-                    <a href="#" class="btn btn-danger">Buscar</a>
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" class="btn btn-danger">Go somewhere</a>
                 </div>
             </div>
         </div>
-        <div class="col-lg-6">
-            <div class="card">
-                <div class="card-header">
-                    <h3 class="card-title">Ubicación del Vehiculo</h3>
-                </div>
+        <div class="col-lg-4">
+            <div class="card" style="width: 18rem;">
+                <img src="./vendor/dist/img/photo2.png" class="card-img-top" alt="...">
                 <div class="card-body">
-                <h3>Lugar de Recolección</h3>
-                    <div class="row">
-                        <div class="col-lg-6">
-                                <div class="form-group">
-                                    <label for="">Dirección:</label>
-                                    <input type="text" name="direccion" id="direccion" class="form-control" disabled="disabled">
-                                </div>
-                                <div class="form-group">
-                                    <label for="">Región:</label>
-                                    <input type="text" name="zona" id="zona" class="form-control" disabled="disabled">
-                                </div>
-                        </div>
-                        <div class="col-lg-6">
-                                <div class="form-group">
-                                    <label for="">Folio:</label>
-                                    <input type="text" name="folio" id="folio" class="form-control" disabled="disabled">
-                                </div>
-                                <div class="form-group">
-                                    <label for="">Código Postal:</label>
-                                    <input type="text" name="codigo_p" id="codigo_p" class="form-control" disabled="disabled">
-                                </div>
-                        </div>
-                    </div>
-                    <h3>Datos del Almacen</h3>
-                    <div class="row">
-                        <div class="col-lg-6">
-                                <div class="form-group">
-                                    <label for="">Nombre del Almacen:</label>
-                                    <input type="text" name="nombre" id="nombre" class="form-control" disabled="disabled">
-                                </div>
-                                <div class="form-group">
-                                    <label for="">Contacto:</label>
-                                    <input type="text" name="contacto" id="contacto" class="form-control" disabled="disabled">
-                                </div>
-                        </div>
-                        <div class="col-lg-6">
-                                <div class="form-group">
-                                    <label for="">Ubicación de almacen:</label>
-                                    <input type="text" name="folio" id="folio" class="form-control" disabled="disabled">
-                                </div>
-                                <div class="form-group">
-                                    <label for="">Telefono:</label>
-                                    <input type="text" name="codigo_p" id="codigo_p" class="form-control" disabled="disabled">
-                                </div>
-                        </div>
-                    </div>
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" class="btn btn-danger">Go somewhere</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <div class="card" style="width: 18rem;">
+                <img src="./vendor/dist/img/photo3.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" class="btn btn-danger">Go somewhere</a>
                 </div>
             </div>
         </div>

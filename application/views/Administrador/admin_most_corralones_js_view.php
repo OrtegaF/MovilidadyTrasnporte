@@ -1,10 +1,7 @@
 <script type="text/javascript" src="./us-states-2.js"></script>
 <script> 
     var corralones=<?php echo json_encode($corralones_r4);?>;
-    var codigo = <?php echo $codigo; ?>;
-    var nom_m = '<?php echo $nom_m; ?>';
-    var direccion1 = '<?php echo $direccion1; ?>';
-    var almacenes = <?php echo json_encode($dis_almacenes); ?>;
+    console.log(corralones);
 </script>
 
 <script>
@@ -59,67 +56,10 @@
 
     /* global statesData */
     L.geoJson(statesData, {style: style}).addTo(map_puebla); 
+    
 
 
-     //marcadores
-
-    //ubicaciones por regiones
-
-    //region4
-
-    var guardar_lat;
-    var guardar_long;
-    var distancia = 38;
-    //var distance;
-    for (var i=0; almacenes.length; i++) {
-        const routingControl = L.Routing.control({
-            waypoints: [
-                L.Routing.waypoint(null, direccion1+ ', ' + nom_m + ', ' + 'Puebla, ' + codigo + ', ' + 'México'),
-                L.latLng(almacenes[i].latitud, almacenes[i].longitud)
-            ],
-            routeWhileDragging: true,
-            geocoder: L.Control.Geocoder.nominatim(),
-            language: 'es',
-        }).addTo(map_puebla);
-
-        //extraemos la distancia
-        
-        routingControl.on('routesfound', function (e) {
-            distance = e.routes[0].summary.totalDistance;
-            console.log('distancia en metros: ' + distance/1000);
-        });    
-        
-        if(distance < distancia){
-            guardar_lat = almacenes[i].latitud;
-            guardar_long = almacenes[i].longitud;
-        }
-        distancia == distance;
-    };
-
-
-
-    const routingControl = L.Routing.control({
-        waypoints: [
-            L.Routing.waypoint(null, direccion1+ ', ' + nom_m + ', ' + 'Puebla, ' + codigo + ', ' + 'México'),
-            L.latLng(guardar_lat, guardar_long)
-        ],
-        routeWhileDragging: true,
-        geocoder: L.Control.Geocoder.nominatim(),
-        language: 'es',
-    }).addTo(map_puebla);
-
-   //extraemos la distancia
-    routingControl.on('routesfound', function (e) {
-        distance = e.routes[0].summary.totalDistance;
-        console.log('distancia en metros: ' + distance);
-    });
-
-   
-    //document.getElementById('ubicacion_a').value='hola mundo';
-
-
-
-     /* coralones extraidos de base de datos */
+    /* coralones extraidos de base de datos para colocarlos en nodos*/
 
     //declaracion para crear un icono para los nodos
     var greenIcon = L.icon({
@@ -129,7 +69,9 @@
     });
 
     for (var i=0; corralones.length; i++) {
-        L.marker([corralones[i].latitud , corralones[i].longitud],{icon: greenIcon}).addTo(map_puebla);        
+        L.marker([corralones[i].latitud , corralones[i].longitud],{icon: greenIcon}).addTo(map_puebla)
+            .bindPopup('<b>'+'nombre: '+corralones[i].nombre+'</b>'+'<br />'+'telefono: '+corralones[i].telefono);
+        
     };
 
     

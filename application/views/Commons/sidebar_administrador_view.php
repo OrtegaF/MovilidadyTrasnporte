@@ -51,6 +51,22 @@
               </p>
             </a>
           </li>
+          <li class="nav-item">
+            <a href="<?= base_url('admin_routes')?>" class="nav-link">
+            <i class="fas fa-route"></i>
+              <p>
+                Marcado de Arrastres
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="<?= base_url('admin_mostcorralones')?>" class="nav-link">
+            <i class="fas fa-map-marked-alt"></i>
+              <p>
+                Ubicaciones de corralones
+              </p>
+            </a>
+          </li>
         </ul>
       </nav>
       <!-- /.sidebar-menu -->

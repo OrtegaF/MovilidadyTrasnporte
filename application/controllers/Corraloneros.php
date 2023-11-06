@@ -66,6 +66,8 @@ class Corraloneros extends CI_Controller {
 		$this->load->view('Commons/footer_view');
 		$this->load->view('Commons/wraper_close_view');
 		$this->load->view('Commons/scripts_view');
+		$this->load->view('Corraloneros/corralonero_gruas_js_view');
+		//$this->load->view('Corraloneros/corralonero_gruas_modal_view');
 		$this->load->view('Corraloneros/gruas_datatable_view');
 	}
 	public function insertGruas(){
@@ -86,7 +88,18 @@ class Corraloneros extends CI_Controller {
 		);
 
 		$this->General_model->set('gruas', $data);
-		redirect(base_url('add_cranes'));
+		redirect(base_url('add_cranesG'));
+	}
+
+	public function borrar_grua()
+	{
+		$id_grua = $this->uri->segment(2);
+		//echo $id_taller;
+		$valores = array(
+			'id_grua'	=>	$id_grua,
+		);
+		$this->General_model->delete('gruas', $valores);
+		redirect(base_url('add_cranesG'));
 	}
 
 	public function addArrastres()

@@ -98,10 +98,10 @@
                         <!-- <a href="" title="Actualizar taller" class="">
                             <i class="fas fa-edit"></i>
                           </a>-->
-                          <a href="" title="Borrar taller" class="btn-borrar" data-name="<?php echo $usuario->id_usuario ?>">
+                          <a href="<?php echo base_url('delete_Users/'.$usuario->id_usuario) ?>" title="Borrar Usuario" class="btn-borrar" data-name="<?php echo $usuario->id_usuario ?>">
                             <i class="fas fa-trash"></i>
                           </a>
-                          <a href="" title="Actualizar taller" class="btn-actualizar" data-id="<?php echo $usuario->id_usuario ?>" data-toggle="modal" data-target="#modal-default">
+                          <a href="" title="Actualizar taller" class="btn-actualizar" data-id="<?php echo $usuario->id_usuario ?>" data-toggle="modal" data-target="#modal-default-usuarios">
                             <i class="fas fa-edit text-purple"></i>
                           </a>
                         </td>

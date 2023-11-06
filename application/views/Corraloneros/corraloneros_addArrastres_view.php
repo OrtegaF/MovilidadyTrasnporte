@@ -120,7 +120,7 @@
                     <th>Contacto</th>
                     <th>Ubicación del Almacén</th>
                     <th>Teléfonoo</th>
-                    <th>Opciones</th>
+                   <!-- <th>Opciones</th>-->
                   </tr>
                 </thead>
                 <tbody class="text-center">
@@ -140,17 +140,15 @@
                         <td><?php echo $arrastre->contacto ?></td>
                         <td><?php echo $arrastre->ubicacion_a ?></td>
                         <td><?php echo $arrastre->telefono ?></td>
-                        <td>
-                        <!-- <a href="" title="Actualizar taller" class="">
-                            <i class="fas fa-edit"></i>
-                          </a>-->
+                       <!-- <td>
+                        
                           <a href="" title="Borrar taller" class="btn-borrar" data-name="<?php echo $arrastre->id_arrastre ?>">
                             <i class="fas fa-trash"></i>
                           </a>
                           <a href="" title="Actualizar taller" class="btn-actualizar" data-id="<?php echo $arrastre->id_arrastre ?>" data-toggle="modal" data-target="#modal-default">
                             <i class="fas fa-edit text-purple"></i>
                           </a>
-                        </td>
+                        </td>-->
                       </tr>
                       <?php
                     }

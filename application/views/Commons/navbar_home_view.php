@@ -8,7 +8,7 @@
       <li class="nav-item d-none d-sm-inline-block">
         <a href="https://smt.puebla.gob.mx/" class="nav-link">SMT de Puebla</a>
       </li><li class="nav-item d-none d-sm-inline-block">
-        <a href="#" class="nav-link">Arrastre</a>
+        <a href="#" class="nav-link" >Arrastre</a>
       </li>
     </ul>
 

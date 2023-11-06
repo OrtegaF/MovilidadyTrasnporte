@@ -1,9 +1,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>SIIUTP | <?= $titulo ?></title>
+  <title>SMT | <?= $titulo ?></title>
   <!-- Icono -->
-  <link rel="icon" type="img/icon" href="./vendor/dist/img/logos/favicon.ico">
+  <link rel="icon" type="img/icon" href="./vendor/dist/img/logos/coche.png">
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
   <!-- Font Awesome -->
@@ -39,6 +39,5 @@
   <script src="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.js"></script>
   <script src="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js"></script>
 
-  
 
 </head>

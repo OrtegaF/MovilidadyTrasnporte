@@ -19,7 +19,7 @@
     </li>
 
     <li class="nav-item">
-        <a class="nav-link text-white"  role="button" title="Salir">
+        <a class="nav-link text-white"  role="button" title="Salir" href="<?php echo base_url('Home')?>">
           <i class="fas fa-sign-out-alt"></i>
         </a>
     </li>

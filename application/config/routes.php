@@ -58,15 +58,34 @@ $route['login']    = 'Login';
 
 //Corraloneros
 $route['corraloneros_menu']    = 'Corraloneros';
-$route['add_cranes']    = 'Corraloneros/addGruas';
+//administrador Gruas
+$route['add_cranesG']    = 'Corraloneros/addGruas';
 $route['insert_cranes'] = 'Corraloneros/insertGruas';
+$route['delete_cranesG/(:any)'] = 'Corraloneros/borrar_grua';
+//administrador Arrastres
 $route['add_drag']    = 'Corraloneros/addArrastres';
 $route['insert_drag'] = 'Corraloneros/insertArrastre';
 
 //Administrador
 $route['admin_menu']    = 'Administrador';
+//corralones
 $route['admin_addCrane'] = 'Administrador/adminCorralones';
 $route['insert_Cranes'] = 'Administrador/insertCorralones';
-$route['admin_addUsers'] = 'Administrador/adminUsuarios';
-$route['insert_Users'] = 'Administrador/insertUsuarios';
+$route['get_Cranes'] = 'Administrador/recupera_corralon';
+$route['update_Cranes'] = 'Administrador/actualiza_corralon';
+$route['delete_Cranes/(:any)'] = 'Administrador/borrar_corralon';
 $route['admin_mostpuebla']    = 'Administrador/mostrar_map';
+$route['admin_mostcorralones']    = 'Administrador/mostrar_corralones';
+
+//usuarios
+$route['admin_addUsers'] = 'Administrador/adminUsuarios';
+$route['get_Users'] = 'Administrador/recupera_usuario';
+$route['update_Users'] = 'Administrador/actualiza_usuario';
+$route['insert_Users'] = 'Administrador/insertUsuarios';
+$route['delete_Users/(:any)'] = 'Administrador/borrar_usuario';
+
+//trazado de rutas
+$route['admin_routes'] = 'Administrador/adminRutas';
+$route['search_info'] = 'Administrador/buscaDatos';
+$route['try_info'] = 'Administrador/llenadoDatos';
+$route['show_c'] = 'Administrador/mostrar_corralones';
