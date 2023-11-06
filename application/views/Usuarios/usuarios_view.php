@@ -39,10 +39,10 @@
         <img src="./vendor/dist/img/AdminLTELogo.png" alt="SMT Puebla" style="height:50px;">
       </li>
       <li class="nav-item d-none d-sm-inline-block">
-        <a href="https://smt.puebla.gob.mx/" class="nav-link" style="color: #fff;"><h4>SMT de Puebla</h4></a>
+        <a href="<?php echo base_url('Home')?>" class="nav-link" style="color: #fff;"><h4>SMT de Puebla</h4></a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
-        <a href="#" class="nav-link" style="color: #fff;"><h4>Arrastre</h4></a>
+        <a href="<?php echo base_url('users_v')?>" class="nav-link" style="color: #fff;"><h4>Arrastre</h4></a>
       </li>
     </ul>
 

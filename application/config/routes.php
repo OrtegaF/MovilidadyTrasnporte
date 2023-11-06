@@ -84,3 +84,6 @@ $route['delete_Users/(:any)'] = 'Administrador/borrar_usuario';
 $route['admin_routes'] = 'Administrador/adminRutas';
 $route['search_info'] = 'Administrador/buscaDatos';
 $route['try_info'] = 'Administrador/llenadoDatos';
+
+//home
+$route['users_v'] = 'Home/usuarios';

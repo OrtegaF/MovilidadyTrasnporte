@@ -18,4 +18,9 @@ class Home extends CI_Controller {
 		/*Aqui va el contenido*/
 		$this->load->view('Home/home_prueba_view');
     }
+	public function usuarios(){
+
+		$this->load->view('Usuarios/usuarios_view');
+		
+	}
 }
