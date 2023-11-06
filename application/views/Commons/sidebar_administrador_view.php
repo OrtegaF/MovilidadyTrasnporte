@@ -59,6 +59,7 @@
               </p>
             </a>
           </li>
+<<<<<<< HEAD
           <li class="nav-item">
             <a href="<?= base_url('admin_mostcorralones')?>" class="nav-link">
             <i class="fas fa-map-marked-alt"></i>
@@ -67,6 +68,8 @@
               </p>
             </a>
           </li>
+=======
+>>>>>>> main
         </ul>
       </nav>
       <!-- /.sidebar-menu -->

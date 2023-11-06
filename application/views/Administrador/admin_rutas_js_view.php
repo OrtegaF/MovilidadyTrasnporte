@@ -2,7 +2,10 @@
     $(function(){
         var codigo;
         var municipio;
+<<<<<<< HEAD
         var direccion1;
+=======
+>>>>>>> main
 
         $('#codigo_p').on('change', function(){
              codigo = $(this).val();
@@ -54,6 +57,7 @@
                 }
             });
         });
+<<<<<<< HEAD
 
         $('#direccion').on('change', function(){
             direccion1 = $(this).val();
@@ -72,5 +76,7 @@
                 }
             });
         });
+=======
+>>>>>>> main
     });
 </script> 

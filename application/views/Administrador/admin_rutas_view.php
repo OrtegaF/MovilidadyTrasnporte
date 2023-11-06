@@ -43,9 +43,12 @@
                                     </div>
                                 </div>
                             </div>
+<<<<<<< HEAD
                     <div id="mapa_">
                         
                     </div>
+=======
+>>>>>>> main
                     <div id="contenidoD">
 
                     </div>
