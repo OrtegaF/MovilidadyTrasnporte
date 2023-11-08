@@ -46,9 +46,11 @@ class Corraloneros extends CI_Controller {
 	public function addGruas()
 	{
 		$gruas= $this->General_model->get('gruas', array(), array(), '');
+		$tipo_gruas= $this->General_model->get('tipo_grua', array(), array(), '');
 
 		$data= array(
 			'gruas'  => $gruas,
+			'tipo_gruas' => $tipo_gruas,
 		);
 		$this->load->view('Commons/html_open_view');
 		$this->load->view('Commons/head_view');

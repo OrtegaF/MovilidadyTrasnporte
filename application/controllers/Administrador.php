@@ -194,7 +194,13 @@ class Administrador extends CI_Controller {
 	public function adminRutas()
 	{
 		//consultas
+		$tipo_vehiculos= $this->General_model->get('tipo_vehiculo', array(), array(), '');
+		$tipo_gruas= $this->General_model->get('tipo_grua', array(), array(), '');
 		
+		$data = array(
+			'tipo_vehiculos' => $tipo_vehiculos,
+			'tipo_gruas' => $tipo_gruas,
+		);
 
         $this->load->view('Commons/html_open_view');
 		$this->load->view('Commons/head_view');
@@ -206,7 +212,7 @@ class Administrador extends CI_Controller {
 		$this->load->view('Commons/content_wraper_header_view');
 
 		/*Aqui va el contenido*/
-		$this->load->view('Administrador/admin_rutas_view');
+		$this->load->view('Administrador/admin_rutas_view', $data);
 
 		$this->load->view('Commons/content_wraper_close_view');
 		$this->load->view('Commons/footer_view');
@@ -269,17 +275,44 @@ class Administrador extends CI_Controller {
 		$zonas= $this->General_model->get('zonas', array('id_zona'=>$region), array(), '');
 		$almacenes= $this->General_model->get('almecenes', array('id_zona'=>$region, 'id_dia' => $id_dia), array(), '');
 		$dias = $this->General_model->get('dias', array(), array(), '');
+
+		//consultas para obtener las gruas, vehiculo y los servicios 
+		$tipo_gruas= $this->General_model->get('tipo_grua', array(), array(), '');
+		$tipo_vehiculos= $this->General_model->get('tipo_vehiculo', array(), array(), '');
+		$servicios= $this->General_model->get('servicios', array(), array(), '');
+		$servicios_des= $this->General_model->get('conceptos_servicios', array(), array(), '');
+
+	
 		$data = array(
 			'datos' 		=> $datos,
 			'municipios' 	=> $municipios,
 			'almacenes' 	=> $almacenes,
 			'dias' 			=> $dias,
 			'zonas'			=> $zonas,
+			'tipo_gruas' => $tipo_gruas,
+			'tipo_vehiculos' => $tipo_vehiculos,
+			'servicios' => $servicios,
 		);
 		//var_dump($data);
 		$this->load->view('Administrador/datos_view', $data);
+		$this->load->view('Commons/scripts_view');
+		//$this->load->view('Administrador/admin_datos_js_view');
+		//$this->load->view('Administrador/mapa_js_view');
 	}
-<<<<<<< HEAD
+	
+	public function buscaDes_servicio(){
+		
+		//consultas para obtener la descripcion de los servicios 
+		$id_servicio = $this->input->post('servicio');
+		$servicios_des= $this->General_model->get('conceptos_servicios', array('id_servicio' => $id_servicio), array(), '');
+		var_dump($servicios_des);
+	
+		$data = array(
+			'servicios_des' => $servicios_des,
+		);
+		//var_dump($data);
+		$this->load->view('Administrador/admin_servicios_view', $data);
+	}
 	
 	public function mostrar_map()
 	{
@@ -328,6 +361,7 @@ class Administrador extends CI_Controller {
 			}
 		}
 		$zonas= $this->General_model->get('zonas', array('id_zona'=>$region), array(), '');
+		$zona = ($zonas!=false)? $zonas->row(0) : false;
 		$almacenes= $this->General_model->get('almecenes', array('id_zona'=>$region, 'id_dia' => $id_dia), array(), '');
 		$dias = $this->General_model->get('dias', array(), array(), '');
 
@@ -343,6 +377,12 @@ class Administrador extends CI_Controller {
 									$a_almacenes = array(
 										'latitud' => $alm->longitud,
 										'longitud' => $alm->latitud,
+										'id_almacen' => $alm->id_almacen,
+										'direccion' => $alm->direccion,
+										'contacto' => $alm->contacto,
+										'nombre' => $alm->nombre,
+										'telefono' => $alm->telefono,
+										'zona'	   => $zona->zona,
 									);
 									array_push($dis_almacenes, $a_almacenes);
 								}
@@ -389,6 +429,62 @@ class Administrador extends CI_Controller {
 
 	}
 
+	public function newFolio(){
+		$matricula = $this->input->post('matricula');
+		$num_vehiculo = $this->input->post('num_vehiculo');
+		$folio= date(Y).'-'.$num_vehiculo.'-'.$matricula;
+		$data = array(
+			'folio' => $folio,
+		);
+		echo json_encode($data);
+	}
+
+	public function costo_arrastre(){
+		$grua = $this->input->post('grua');
+		//$mt = $this->input->post('mt');
+		$km_1 = $this->input->post('km');
+		$tipo_gruas= $this->General_model->get('tipo_grua', array('id_grua'=>$grua), array(), '');
+		$tipo_grua = ($tipo_gruas!=false)? $tipo_gruas->row(0) : false;
+
+		$costo = 0;
+		$km = '';
+		$tarifa_base = '';
+		if($tipo_grua->id_grua == 1){
+			$km = $tipo_grua->km;
+			$tarifa_base = $tipo_grua->tarifa_base;
+
+			$costo = $km_1 / $km;
+			$costo = $costo * $tarifa_base;
+		}
+		if($tipo_grua->id_grua == 2){
+			$km = $tipo_grua->km;
+			$tarifa_base = $tipo_grua->tarifa_base;
+
+			$costo = $km_1 / $km;
+			$costo = $costo * $tarifa_base;
+		}
+		if($tipo_grua->id_grua == 3){
+			$km = $tipo_grua->km;
+			$tarifa_base = $tipo_grua->tarifa_base;
+
+			$costo = $km_1 / $km;
+			$costo = $costo * $tarifa_base;
+		}
+		if($tipo_grua->id_grua == 2){
+			$km = $tipo_grua->km;
+			$tarifa_base = $tipo_grua->tarifa_base;
+
+			$costo = $km_1 / $km;
+			$costo = $costo * $tarifa_base;
+		}
+		$data = array(
+			'costo' => $costo,
+		);
+
+		echo json_encode($data);
+		
+	}
+
 	public function mostrar_corralones()
 	{
 		//consulta para tarer los corralones
@@ -417,17 +513,6 @@ class Administrador extends CI_Controller {
 
 
 		/*Aqui va el contenido*/
-=======
-	public function mostrar_map()
-	{
-		//consultas
-		$arrastres = $this->General_model->get('arrastres', array(). array(), '');
-
-		$data= array(
-			'arrastres' => $arrastres,
-		);
-
->>>>>>> main
 		$this->load->view('Commons/html_open_view');
 		$this->load->view('Commons/head_view');
 		$this->load->view('Commons/body_open_view');
@@ -437,26 +522,55 @@ class Administrador extends CI_Controller {
 		$this->load->view('Commons/content_wraper_open_view');
 		$this->load->view('Commons/content_wraper_header_view');
 
-<<<<<<< HEAD
 		/*Aqui va el contenido*/
 		$this->load->view('Administrador/admin_mostrar_corralones_view');
 
-=======
-
-		/*Aqui va el contenido*/
-		$this->load->view('Administrador/administrador_mostrarmap_view');
-		
->>>>>>> main
 		$this->load->view('Commons/content_wraper_close_view');
 		$this->load->view('Commons/footer_view');
 		$this->load->view('Commons/wraper_close_view');
 		$this->load->view('Commons/scripts_view');
-<<<<<<< HEAD
 		$this->load->view('Administrador/admin_most_corralones_js_view', $data);
-=======
-		
-		$this->load->view('Administrador/mapa_js_view');
->>>>>>> main
 
+	}
+
+	public function insertArrastre(){
+		$matricula = $this->input->post('matricula');
+		$num_vehiculos = $this->input->post('num_vehiculos');
+		$folio = $this->input->post('folio');
+		$modelo = $this->input->post('modelo');
+		$t_vehiculo = $this->input->post('t_vehiculo');
+		$grua = $this->input->post('grua');
+		$codigo_p = $this->input->post('codigo_p');
+		$lugar = $this->input->post('lugar');
+		$direccion = $this->input->post('direccion');
+		$region = $this->input->post('region');
+		$almacen = $this->input->post('almacen');
+		$contacto = $this->input->post('contacto');
+		$ubicacion_a = $this->input->post('ubicacion_a');
+		$telefono = $this->input->post('telefono');
+		$km = $this->input->post('km');
+		$costo_arrastre = $this->input->post('costo_arrastre');
+		$data = array(
+			'matricula' => $matricula,
+			'no_vehiculos' => $num_vehiculos,
+			'folio' => $folio,
+			'modelo_vehiculo' => $modelo,
+			'tipo_vehiculo' => $t_vehiculo,
+			'grua' => $grua,
+			'cp' => $codigo_p,
+			'colonia' => $lugar,
+			'direccion' => $direccion,
+			'region' => $region,
+			'ubicacion_almacen' => $ubicacion_a,
+			'almacen' => $almacen,
+			'telefono' => $telefono,
+			'contacto' => $contacto,
+			'kilometros' => $km,
+			'costo_arrastre' => $costo_arrastre,
+			'fecha' => date("Y/m/d H:i:s"),
+		);
+		$result = $this->General_model->set('arrastres_admin', $data);
+		//var_dump($result);
+		//redirect(base_url('insert_arrastre'));
 	}
 }

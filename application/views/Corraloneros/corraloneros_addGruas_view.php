@@ -20,10 +20,15 @@
                                 <label for="">Tipo de Grua</label>
                                 <select name="tipo" id="tipo" class="form-control">
                                     <option value="">-Seleccione-</option>
-                                    <option value="A">A</option>
-                                    <option value="B">B</option>
-                                    <option value="C">C</option>
-                                    <option value="D">D</option>
+                                    <?php
+                                    if ($tipo_gruas!=false) {
+                                        foreach ($tipo_gruas->result() as $tipo_grua) {
+                                    ?>
+                                        <option value="<?= $tipo_grua->tipo ?>"><?= $tipo_grua->tipo ?></option>
+                                    <?php
+                                        }
+                                    }
+                                    ?>
                                 </select>
                             </div>
                         </div>
