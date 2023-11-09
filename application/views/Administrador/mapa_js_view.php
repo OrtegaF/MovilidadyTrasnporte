@@ -112,8 +112,8 @@
                 data : datos,
                 success : function(data){
                     respuesta= JSON.parse(data);
-                    alert(respuesta.costo);
-                $('#costo_arrastre').attr( 'value',respuesta.costo).val;
+                    //alert(respuesta.costo);
+                $('#costo_arrastre').attr( 'value',respuesta.costo.toFixed()).val;
                 }
             });
 

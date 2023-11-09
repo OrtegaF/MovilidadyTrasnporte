@@ -470,7 +470,7 @@ class Administrador extends CI_Controller {
 			$costo = $km_1 / $km;
 			$costo = $costo * $tarifa_base;
 		}
-		if($tipo_grua->id_grua == 2){
+		if($tipo_grua->id_grua == 4){
 			$km = $tipo_grua->km;
 			$tarifa_base = $tipo_grua->tarifa_base;
 

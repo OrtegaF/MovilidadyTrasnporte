@@ -129,6 +129,7 @@ class Corraloneros extends CI_Controller {
 		$this->load->view('Commons/footer_view');
 		$this->load->view('Commons/wraper_close_view');
 		$this->load->view('Commons/scripts_view');
+		$this->load->view('Corraloneros/corraloneros_addArrastres_js_view');
 		$this->load->view('Corraloneros/arrastres_datatable_view');
 	}
 

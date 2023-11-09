@@ -22,7 +22,7 @@
                 success : function(data){
                     $('#lugar').html(data);
                     $('#lugar').removeAttr('disabled');
-                   alert(codigo);
+                   //alert(codigo);
                 }
             });
         });
@@ -38,13 +38,13 @@
                 data : datos,
                 success : function(data){
                     $('#direccion').removeAttr('disabled');
-                   alert(codigo);
-                   alert(municipio);
+                   /*alert(codigo);
+                   alert(municipio);*/
                 }
             });
         });
         $('#direccion').on('change', function(){
-            alert(codigo);
+            //alert(codigo);
             let datos = {
                 'codigo' : codigo, 
                 'municipio': municipio,
@@ -80,7 +80,7 @@
 
         $('#matricula').on('change', function(){
              matricula = $(this).val();
-             alert(matricula);
+             //alert(matricula);
             /*let datos = {
                 'codigo' : codigo, 
             }*/
@@ -96,7 +96,7 @@
         });
         $('#num_vehiculos').on('change', function(){
              num_vehiculo = $(this).val();
-             alert(num_vehiculo);
+             //alert(num_vehiculo);
             let datos = {
                 'matricula' : matricula,
                 'num_vehiculo' : num_vehiculo,
@@ -107,10 +107,21 @@
                 data : datos,
                 success : function(data){
                     respuesta= JSON.parse(data);
-                    alert(respuesta.folio);
+                   // alert(respuesta.folio);
                 $('#folio').attr( 'value',respuesta.folio).val;
                 }
             });
+        });
+
+        $('#direccion').change(function(){ 
+            //alert("el input cambio");
+            if($(this).val()==''){ 
+                $('#guardar_arrastre').attr('disabled', 'disabled');
+            }
+            else{
+                $('#guardar_arrastre').removeAttr("disabled");
+                
+            }
         });
 
         $('#guardar_arrastre').on("click",function() {
@@ -158,9 +169,17 @@
 				url	:  '<?= base_url('Administrador/insertArrastre')?>',
 				data: datos,
 				success: function(data){
-                    alert('Tus datos se han registrado correctamente');
-                    //var url = "https://sii.utpuebla.edu.mx/services_referencesRegs";    
-                    //$(location).attr('href',url);
+                    var Toast = Swal.mixin({
+                        toast: true,
+                        position: 'top-end',
+                        timerProgressBar: true,
+                        showConfirmButton: false,
+                        timer: 1200
+                    });
+                        Toast.fire({
+                        icon: 'success',
+                        title: 'Datos guardados',
+                        })
 				}
 			});
         });

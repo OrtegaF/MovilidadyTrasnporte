@@ -39,5 +39,14 @@
   <script src="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.js"></script>
   <script src="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js"></script>
 
+  <style>
+      .card-header{
+        background: #691b31 !important;
+      }
+      .small-box{
+        background: #691b31 !important;
+      }
+ </style>
+
 
 </head>

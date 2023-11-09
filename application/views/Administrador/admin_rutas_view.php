@@ -104,7 +104,7 @@
                     </div>
             </div>
             <div class="card-footer">
-                <button type="submit" class="btn btn-danger" id="guardar_arrastre" >Guardar</button>
+                <button disabled="disabled" type="submit" class="btn" style= "background: #495057; color: white;" id="guardar_arrastre" >Guardar</button>
             </div>
            <!-- </form> -->
         </div>

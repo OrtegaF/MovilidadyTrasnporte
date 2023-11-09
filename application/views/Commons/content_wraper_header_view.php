@@ -5,12 +5,6 @@
           <div class="col-sm-6">
             <h1>Movilidad y Transporte</h1>
           </div>
-          <div class="col-sm-6">
-            <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><i class="fas fa-house-user" style="position: relative; top: 6px; right: 2px;"></i> Inicio</li>
-              <li class="breadcrumb-item active"></li>
-            </ol>
-          </div>
         </div>
       </div><!-- /.container-fluid -->
     </section>

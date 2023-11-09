@@ -15,11 +15,20 @@
   <link rel="stylesheet" href="./vendor/plugins/icheck-bootstrap/icheck-bootstrap.min.css">
   <!-- Theme style -->
   <link rel="stylesheet" href="./vendor/dist/css/adminlte.min.css">
+
+  <style>
+    body {
+      background-image: url("./vendor/dist/img/logos/puebla.jpg");
+      background-size: cover;
+      background-repeat:no-repeat;
+      background-position: center center;
+    }
+  </style>
 </head>
 <body class="hold-transition login-page">
 <div class="login-box">
   <div class="login-logo">
-    <a href="../../index2.html"><b>SMT</b>Puebla</a>
+    <a style="color: white" href="../../index2.html"><b>SMT</b>Puebla</a>
   </div>
   <!-- /.login-logo -->
   <div class="card">

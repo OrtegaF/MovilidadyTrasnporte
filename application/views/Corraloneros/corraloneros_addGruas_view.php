@@ -7,9 +7,6 @@
                         <button type="button" class="btn btn-tool" data-card-widget="collapse">
                         <i class="fas fa-plus"></i>
                         </button>
-                        <button type="button" class="btn btn-tool" data-card-widget="remove">
-                        <i class="fas fa-times"></i>
-                        </button>
                     </div>
             </div>
             <div class="card-body">
@@ -67,7 +64,7 @@
                     </div>
             </div>
             <div class="card-footer">
-                <button type="submit" class="btn btn-danger" id="guardaInst" >Guardar</button>
+                <button type="submit" class="btn" style= "background: #495057; color: white;" id="guardaInst" disabled="disabled">Guardar</button>
             </div>
             </form>
         </div>
@@ -110,7 +107,7 @@
                             <i class="fas fa-edit"></i>
                           </a>-->
                           <a href="<?php echo base_url('delete_cranesG/'.$grua->id_grua) ?>" title="Borrar Grua" class="btn-borrar" data-name="<?php echo $grua->id_grua ?>">
-                            <i class="fas fa-trash"></i>
+                            <i style="color: #691b31;" class="fas fa-trash"></i>
                           </a>
                         </td>
                       </tr>

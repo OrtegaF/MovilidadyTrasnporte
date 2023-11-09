@@ -7,9 +7,6 @@
                         <button type="button" class="btn btn-tool" data-card-widget="collapse">
                         <i class="fas fa-plus"></i>
                         </button>
-                        <button type="button" class="btn btn-tool" data-card-widget="remove">
-                        <i class="fas fa-times"></i>
-                        </button>
                     </div>
             </div>
             <div class="card-body">
@@ -20,19 +17,19 @@
                                 <div class="col-lg-12 col-md-6">
                                     <div class="form-group">
                                         <label for="">Lugar de Recolección</label>
-                                        <input type="text" id="lugar" name="lugar" placeholder="14 Norte #5" class="form-control">
+                                        <input type="text" id="lugar" name="lugar" placeholder="14 Norte #5" class="form-control" required="required">
                                     </div>
                                 </div>
                                 <div class="col-lg-12 col-md-6">
                                     <div class="form-group">
                                         <label for="">Colonia o Localidad</label>
-                                        <input type="text" id="colonia" name="colonia" class="form-control" placeholder="Bosques de San Sebastian">
+                                        <input type="text" id="colonia" name="colonia" class="form-control" placeholder="Bosques de San Sebastian" required="required">
                                     </div>
                                 </div>
                                 <div class="col-lg-12 col-md-6">
                                     <div class="form-group">
                                         <label for="">Municipio</label>
-                                        <input type="text" id="municipio" name="municipio" class="form-control" placeholder="Puebla">
+                                        <input type="text" id="municipio" name="municipio" class="form-control" placeholder="Puebla" required="required">
                                     </div>
                                 </div>
                         </div>
@@ -40,19 +37,19 @@
                         <div class="col-lg-12 col-md-6">
                                 <div class="form-group">
                                         <label for="">Folio</label>
-                                        <input type="text" id="folio" name="folio" placeholder="A2746" class="form-control">
+                                        <input type="text" id="folio" name="folio" placeholder="A2746" class="form-control" required="required">
                                     </div>
                                 </div>
                                 <div class="col-lg-12 col-md-6">
                                     <div class="form-group">
                                         <label for="">Código Postal</label>
-                                        <input type="text" id="codigo_p" name="codigo_p" class="form-control" placeholder="90583">
+                                        <input type="text" id="codigo_p" name="codigo_p" class="form-control" placeholder="90583" required="required">
                                     </div>
                                 </div>
                                 <div class="col-lg-12 col-md-6">
                                     <div class="form-group">
                                         <label for="">Matricula del vehiculo arrastrado</label>
-                                        <input type="text" id="matricula" name="matricula" class="form-control" placeholder="T90H583">
+                                        <input type="text" id="matricula" name="matricula" class="form-control" placeholder="T90H583" required="required">
                                     </div>
                                 </div>
                         </div>
@@ -63,19 +60,19 @@
                                 <div class="col-lg-12 col-md-6">
                                     <div class="form-group">
                                         <label for="">Región</label>
-                                        <input type="text" id="region" name="region" class="form-control" placeholder="2A">
+                                        <input type="text" id="region" name="region" class="form-control" placeholder="2A" required="required">
                                     </div>
                                 </div>
                                 <div class="col-lg-12 col-md-6">
                                     <div class="form-group">
                                         <label for="">Almacén</label>
-                                        <input type="text" id="almacen" name="almacen" class="form-control" placeholder="arrastres TED">
+                                        <input type="text" id="almacen" name="almacen" class="form-control" placeholder="arrastres TED" required="required">
                                     </div>
                                 </div>
                                 <div class="col-lg-12 col-md-6">
                                     <div class="form-group">
                                         <label for="">Contacto</label>
-                                        <input type="text" id="contacto" name="contacto" class="form-control" placeholder="ortegavaldesf@gmail.com">
+                                        <input type="text" id="contacto" name="contacto" class="form-control" placeholder="ortegavaldesf@gmail.com" required="required">
                                     </div>
                                 </div>
                             </div>
@@ -83,20 +80,20 @@
                                 <div class="col-lg-12">
                                     <div class="form-group">
                                         <label for="">Ubicación del Alamacén</label>
-                                        <input type="text" id="ubicacion_a" name="ubicacion_a" class="form-control" placeholder="11 Sur #67 Colonia Centro">
+                                        <input type="text" id="ubicacion_a" name="ubicacion_a" class="form-control" placeholder="11 Sur #67 Colonia Centro" required="required">
                                     </div>
                                 </div>
                                 <div class="col-lg-12">
                                     <div class="form-group">
                                         <label for="">Teléfono</label>
-                                        <input type="text" id=telefono" name="telefono" class="form-control" placeholder="2225678903">
+                                        <input type="text" id="telefono" name="telefono" class="form-control" placeholder="2225678903" required="required">
                                     </div>
                                 </div>
                             </div>
                     </div>
             </div>
             <div class="card-footer">
-                <button type="submit" class="btn btn-danger" id="guardaInst" >Guardar</button>
+                <button type="submit" class="btn" style= "background: #495057; color: white;" id="guardaInst" disabled="disabled" >Guardar</button>
             </div>
             </form>
         </div>
