@@ -33,13 +33,13 @@
     <!-- Left navbar links -->
     <ul class="navbar-nav">
       <li class="nav-item d-none d-sm-inline-block">
-        <img src="./vendor/dist/img/logos/smt.png" alt="SMT Puebla" style="height:50px;">
+      <a href="<?php echo base_url('Home')?>"><img src="./vendor/dist/img/logos/smt.png" alt="SMT Puebla" style="height:50px;"></a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
         <a href="https://smt.puebla.gob.mx/" class="nav-link" style="color: #fff;"><h4>SMT de Puebla</h4></a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
-        <a href="#" class="nav-link" style="color: #fff;"><h4>Arrastre</h4></a>
+        <a href="<?php echo base_url('users_v')?>" class="nav-link" style="color: #fff;"><h4>Arrastre</h4></a>
       </li>
     </ul>
 
@@ -61,31 +61,28 @@
     <div class="row">
         <div class="col-lg-4">
             <div class="card" style="width: 18rem;">
-                <img src="./vendor/dist/img/photo1.png" class="card-img-top" alt="...">
+                <img src="./vendor/dist/img/plan_desarrollo.png" class="card-img-top" alt="...">
                 <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="btn btn-danger">Go somewhere</a>
+                    <h5 class="card-title">Plan estatal de desarrollo 2019-2024</h5>
+                    <a href="https://planeader.puebla.gob.mx/archivos/PED_2019-2024.pdf" class="btn">¡Conoce más!</a>
                 </div>
             </div>
         </div>
         <div class="col-lg-4">
             <div class="card" style="width: 18rem;">
-                <img src="./vendor/dist/img/photo2.png" class="card-img-top" alt="...">
+                <img src="./vendor/dist/img/COESPO.png" class="card-img-top" alt="...">
                 <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="btn btn-danger">Go somewhere</a>
+                    <h5 class="card-title">Consejo Estatal de Población (COESPO)</h5>
+                    <a href="https://coespo.puebla.gob.mx/" class="btn">¡Conoce más!</a>
                 </div>
             </div>
         </div>
         <div class="col-lg-4">
             <div class="card" style="width: 18rem;">
-                <img src="./vendor/dist/img/photo3.jpg" class="card-img-top" alt="...">
+                <img src="./vendor/dist/img/fiscales.png" class="card-img-top" alt="...">
                 <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="btn btn-danger">Go somewhere</a>
+                    <h5 class="card-title">Beneficios fiscales</h5>
+                    <a href="https://www.puebla.gob.mx/images/documentos-de-interes/1PROGRAMADEBENEFICIOSFISCALESINFORMACIONPARABANNER.pdf" class="btn">¡Conoce más!</a>
                 </div>
             </div>
         </div>

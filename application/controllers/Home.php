@@ -18,4 +18,33 @@ class Home extends CI_Controller {
 		/*Aqui va el contenido*/
 		$this->load->view('Home/home_prueba_view');
     }
+
+	public function usuarios(){
+
+		$matricula= $this->input->post('matricula');
+		$arrastres= $this->General_model->get('arrastres_admin', array('matricula'=>$matricula), array(), '');
+		$arrastre = ($arrastres!=false)? $arrastres->row(0) : false;
+		//var_dump($arrastre);
+
+		$data= array(
+			'arrastre'  => $arrastre,
+		);
+
+		$this->load->view('Usuarios/usuarios_view', $data);
+		
+	}
+
+	/*public function busca_matricula(){
+
+		$matricula= $this->input->post('matricula');
+		$arrastres= $this->General_model->get('arrastres_admin', array('matricula'=>$matricula), array(), '');
+		$arrastre = ($arrastres!=false)? $arrastres->row(0) : false;
+		var_dump($arrastre);
+
+		$data= array(
+			'arrastre'  => $arrastre,
+		);
+		//$this->load->view('Usuarios/usuarios_view');
+		
+	}*/
 }

@@ -90,3 +90,7 @@ $route['search_info'] = 'Administrador/buscaDatos';
 $route['try_info'] = 'Administrador/llenadoDatos';
 $route['show_c'] = 'Administrador/mostrar_corralones';
 $route['insert_arrastre'] = 'Administrador/insertArrastre';
+
+//home
+$route['users_v'] = 'Home/usuarios';
+//$route['users_matricula'] = 'Home/busca_matricula';

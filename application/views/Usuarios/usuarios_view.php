@@ -29,17 +29,17 @@
     <link rel="stylesheet" href="./vendor/dist/css/beaver.css">
 </head>
 <body style="background: #dcdcdc;">
-<nav class=" navbar navbar-expand navbar-white navbar-light"  style= "background: #902923">
+<nav class=" navbar navbar-expand navbar-white navbar-light"  style= "background: #691b31">
     <!-- Left navbar links -->
     <ul class="navbar-nav">
       <li class="nav-item d-none d-sm-inline-block">
-        <img src="./vendor/dist/img/AdminLTELogo.png" alt="SMT Puebla" style="height:50px;">
+      <a href="<?php echo base_url('Home')?>"><img src="./vendor/dist/img/logos/smt.png" alt="SMT Puebla" style="height:50px;"></a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
         <a href="https://smt.puebla.gob.mx/" class="nav-link" style="color: #fff;"><h4>SMT de Puebla</h4></a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
-        <a href="#" class="nav-link" style="color: #fff;"><h4>Arrastre</h4></a>
+        <a href="<?php echo base_url('users_v')?>" class="nav-link" style="color: #fff;"><h4>Arrastre</h4></a>
       </li>
     </ul>
 
@@ -47,24 +47,7 @@
     <ul class="navbar-nav ml-auto" >
       <!-- Navbar Search -->
       <li class="nav-item">
-        <a class="nav-link" data-widget="navbar-search" href="#" role="button">
-          <i class="fas fa-search" style="color: #fff;"></i>
-        </a>
-        <div class="navbar-search-block">
-          <form class="form-inline">
-            <div class="input-group input-group-sm">
-              <input class="form-control form-control-navbar" type="search" placeholder="Search" aria-label="Search" >
-              <div class="input-group-append">
-                <button class="btn btn-navbar" type="submit">
-                  <i class="fas fa-search"></i>
-                </button>
-                <button class="btn btn-navbar" type="button" data-widget="navbar-search">
-                  <i class="fas fa-times"></i>
-                </button>
-              </div>
-            </div>
-          </form>
-        </div>
+        
       </li>
 
       <li class="nav-item">
@@ -79,23 +62,24 @@
     <div class="row">
         <div class="col-lg-6">
             <div class="card" style="width: 33rem;">
-                <img src="./vendor/dist/img/photo2.png" class="card-img-top" alt="...">
+                <img src="./vendor/dist/img/matricula.jpg" class="card-img-top" alt="...">
                 <div class="card-body">
-                    <h5 class="card-title">Busqueda de Vehículo</h5>
-                    <br>
-                    <p>Ingrese su Matricula.</p>
+                <form method="POST" id="addGruas" action="<?php echo base_url('users_v')  ?>">
                         <div class="form-group">
                             <label for="">Matricula:</label>
                             <input type="text" name="matricula" id="matricula" class="form-control">
                         </div>
-                    <a href="#" class="btn btn-danger">Buscar</a>
-                </div>
+                    </div>
+                    <div class="card-footer">
+                      <button type="submit" class="btn" style= "background: #495057; color: white;" id="guardaInst" >Buscar</button>
+                    </div>
+                </form>
             </div>
         </div>
         <div class="col-lg-6">
             <div class="card">
-                <div class="card-header">
-                    <h3 class="card-title">Ubicación del Vehiculo</h3>
+                <div class="card-header" style= "background: #691b31; color: white">
+                    <h3 class="card-title">Ubicación del Vehiculo con Matricula: <?=$arrastre->matricula?></h3>
                 </div>
                 <div class="card-body">
                 <h3>Lugar de Recolección</h3>
@@ -103,21 +87,21 @@
                         <div class="col-lg-6">
                                 <div class="form-group">
                                     <label for="">Dirección:</label>
-                                    <input type="text" name="direccion" id="direccion" class="form-control" disabled="disabled">
+                                    <input type="text" name="direccion" id="direccion" class="form-control" disabled="disabled" value="<?= $arrastre->direccion ?>">
                                 </div>
                                 <div class="form-group">
                                     <label for="">Región:</label>
-                                    <input type="text" name="zona" id="zona" class="form-control" disabled="disabled">
+                                    <input type="text" name="zona" id="zona" class="form-control" disabled="disabled" value="<?= $arrastre->region ?>">
                                 </div>
                         </div>
                         <div class="col-lg-6">
                                 <div class="form-group">
                                     <label for="">Folio:</label>
-                                    <input type="text" name="folio" id="folio" class="form-control" disabled="disabled">
+                                    <input type="text" name="folio" id="folio" class="form-control" disabled="disabled" value="<?= $arrastre->folio ?>">
                                 </div>
                                 <div class="form-group">
                                     <label for="">Código Postal:</label>
-                                    <input type="text" name="codigo_p" id="codigo_p" class="form-control" disabled="disabled">
+                                    <input type="text" name="codigo_p" id="codigo_p" class="form-control" disabled="disabled" value="<?= $arrastre->cp ?>">
                                 </div>
                         </div>
                     </div>
@@ -126,21 +110,21 @@
                         <div class="col-lg-6">
                                 <div class="form-group">
                                     <label for="">Nombre del Almacen:</label>
-                                    <input type="text" name="nombre" id="nombre" class="form-control" disabled="disabled">
+                                    <input type="text" name="nombre" id="nombre" class="form-control" disabled="disabled" value="<?= $arrastre->almacen ?>">
                                 </div>
                                 <div class="form-group">
                                     <label for="">Contacto:</label>
-                                    <input type="text" name="contacto" id="contacto" class="form-control" disabled="disabled">
+                                    <input type="text" name="contacto" id="contacto" class="form-control" disabled="disabled" value="<?= $arrastre->contacto ?>">
                                 </div>
                         </div>
                         <div class="col-lg-6">
                                 <div class="form-group">
                                     <label for="">Ubicación de almacen:</label>
-                                    <input type="text" name="folio" id="folio" class="form-control" disabled="disabled">
+                                    <input type="text" name="folio" id="folio" class="form-control" disabled="disabled" value="<?= $arrastre->ubicacion_almacen ?>">
                                 </div>
                                 <div class="form-group">
                                     <label for="">Telefono:</label>
-                                    <input type="text" name="codigo_p" id="codigo_p" class="form-control" disabled="disabled">
+                                    <input type="text" name="codigo_p" id="codigo_p" class="form-control" disabled="disabled" value="<?= $arrastre->telefono ?>">
                                 </div>
                         </div>
                     </div>
