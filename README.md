@@ -17,7 +17,7 @@ Debes de clonar el proyecto en la consola de git de la siguiente manera
 ```
 git clone https://github.com/OrtegaF/MovilidadyTrasnporte.git
 ```
-Recordemos que este proyecto debe de estar adentro de la carpeta de xampp/htdocs para que podamos visualizar correctamente el proyecto
+Recordemos que este proyecto debe de estar adentro de la carpeta de xampp/htdocs para que podamos visualizar correctamente el proyecto y debemos de entrar a la rama Abi ya que en esta se encuentra todas las actaulizaciones
 
 
 # Instalacion de react-leaflet, leaflet-routing-machine y leaflet-control-geocoder
