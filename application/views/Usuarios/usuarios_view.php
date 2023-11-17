@@ -127,6 +127,12 @@
                                     <input type="text" name="codigo_p" id="codigo_p" class="form-control" disabled="disabled" value="<?= $arrastre->telefono ?>">
                                 </div>
                         </div>
+                        <div class="col-lg-12">
+                                <div class="form-group">
+                                    <label for="">Costo del arrastre</label>
+                                    <input type="text" name="folio" id="folio" class="form-control" disabled="disabled" value="$<?= $arrastre->costo_arrastre ?>.00">
+                                </div>
+                        </div>
                     </div>
                 </div>
             </div>
