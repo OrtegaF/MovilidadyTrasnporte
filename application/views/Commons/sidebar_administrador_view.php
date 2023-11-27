@@ -25,16 +25,6 @@
                with font-awesome or any other icon font library -->
           <b>
             <li class="nav-item">
-              <a href="<?= base_url('admin_addCrane')?>" class="nav-link">
-                <i style="color: #691b31;" class="fas fa-car"></i>
-                <p style="color: #FFFFF;">
-                  Corralones
-                </p>
-              </a>
-            </li>
-          </b>
-          <b>
-            <li class="nav-item">
               <a href="<?= base_url('admin_addUsers')?>" class="nav-link">
                 <i style="color: #691b31;" class="fas fa-users"></i>
                 <p style="color: #FFFFF;">

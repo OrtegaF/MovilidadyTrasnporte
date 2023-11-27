@@ -68,12 +68,7 @@ $route['insert_drag'] = 'Corraloneros/insertArrastre';
 
 //Administrador
 $route['admin_menu']    = 'Administrador';
-//corralones
-$route['admin_addCrane'] = 'Administrador/adminCorralones';
-$route['insert_Cranes'] = 'Administrador/insertCorralones';
-$route['get_Cranes'] = 'Administrador/recupera_corralon';
-$route['update_Cranes'] = 'Administrador/actualiza_corralon';
-$route['delete_Cranes/(:any)'] = 'Administrador/borrar_corralon';
+
 $route['admin_mostpuebla']    = 'Administrador/mostrar_map';
 $route['admin_mostcorralones']    = 'Administrador/mostrar_corralones';
 

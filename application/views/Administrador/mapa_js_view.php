@@ -145,7 +145,7 @@
      /* coralones extraidos de base de datos */
 
     //declaracion para crear un icono para los nodos
-    let greenIcon = L.icon({
+   /* let greenIcon = L.icon({
         iconUrl: './node_modules/leaflet/dist/images/icon-coche.png', //direccion donde se encuentra la imagen
         iconSize:     [50, 50], // size of the icon
         popupAnchor:  [-3, -76] // point from which the popup should open relative to the iconAnchor
@@ -153,7 +153,7 @@
 
     for (let i=0; corralones.length; i++) {
         L.marker([corralones[i].latitud , corralones[i].longitud],{icon: greenIcon}).addTo(map_puebla);        
-    };
+    };*/
 
              
    
